@@ -1,0 +1,48 @@
+/* Стили Header */
+.header {
+  display: flex; /* выставить блоки находящиеся внутри этого блока вряд */
+  border: 1px solid black; /* рамка блока */
+  justify-content: space-between; /* расположить элементы/блоки равноудаленно по ширине блока */
+  align-items: center; /* выравнивание всех элеметов по горизонтальной линии */
+  height: 64px; /* высота */
+}
+
+.logo {
+  border: 1px solid black; /* рамка блока */
+  width: 64px; /* ширина */
+  height: 64px; /* высота */
+}
+
+.rigt_panel {
+  display: flex; /* выставить блоки находящиеся внутри этого блока вряд */
+  gap: 50px; /* расстояние между блоками */
+}
+
+.header__nav {
+  margin: 0; /* ? */
+  padding: 0; /* ? */
+  display: flex; /* выставить блоки находящиеся внутри этого блока вряд */
+  gap: 50px; /* расстояние между блоками */
+}
+
+.header__nav_link {
+  text-decoration: none; /* убрать нижнее подчеркивание текста ссылки */
+}
+
+.login_link {
+  width: 96px; /* ширина */
+  height: 36px; /* высота */
+  background-color: #fdb913; /* цвет фона */
+  text-align: center; /* выровнить по центру блока */
+}
+
+.link {
+  color: white; /* ? */
+  text-decoration: none; /* убрать нижнее подчеркивание текста ссылки */
+}
+
+.login_link:hover {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12); /* ? */
+}
+/* Стили Header */
