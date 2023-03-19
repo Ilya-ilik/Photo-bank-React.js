@@ -19,8 +19,8 @@
 }
 
 .header__nav {
-  margin: 0; /* ? */
-  padding: 0; /* ? */
+  margin: 0; /* внешний отступ */
+  padding: 0; /* внутренний отступ */
   display: flex; /* выставить блоки находящиеся внутри этого блока вряд */
   gap: 50px; /* расстояние между блоками */
 }
@@ -37,12 +37,61 @@
 }
 
 .link {
-  color: white; /* ? */
+  color: white; /* цвет текста */
   text-decoration: none; /* убрать нижнее подчеркивание текста ссылки */
 }
 
 .login_link:hover {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
-    0 1px 5px 0 rgba(0, 0, 0, 0.12); /* ? */
+    0 1px 5px 0 rgba(0, 0, 0, 0.12); /* в данном случае тень при наведении на кнопку */
 }
 /* Стили Header */
+
+/* Стили Content */
+.content {
+  position: relative; /* ? */
+  max-width: 1230px; /* ? */
+  margin-right: auto; /* ? */
+  margin-left: auto; /* ? */
+}
+
+.page_header {
+  font-size: 45px; /* ? */
+  font-weight: 900; /* ? */
+  line-height: 1.2; /* ? */
+  margin-bottom: 2rem; /* ? */
+  text-align: center; /* ? */
+  text-transform: uppercase; /* ? */
+  color: #272c3c; /* ? */
+  position: relative; /* ? */
+}
+
+.page_subheader {
+  font-size: 20px; /* ? */
+  font-weight: 300; /* ? */
+  text-align: center; /* ? */
+  position: relative; /* ? */
+  margin-bottom: 2rem; /* ? */
+}
+
+.editor_selections_items {
+  border: 1px solid black; /* рамка блока */
+}
+
+.editor_selections_item {
+  display: block; /* ? */
+  float: left; /* ? */
+  width: 375px; /* ? */
+  height: 300px; /* ? */
+  margin: 1rem; /* ? */
+}
+
+.image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+}
+
+/* Стили Content */
