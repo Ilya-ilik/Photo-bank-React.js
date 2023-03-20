@@ -1,5 +1,5 @@
 import styles from "./Home.module.css"; // импортируем модуль css
-import { images } from "./images.data"; // импортируем данные
+import { images } from "./images.data"; // импортируем данные картинок
 
 const Header = () => {
   return (
@@ -43,22 +43,37 @@ const Content = () => {
         </p>
         <div className={styles.editor_selections_items}>
           {images.map((img) => (
-            <div key={img.id} className={styles.editor_selections_item}>
+            <a href="#" key={img.id} className={styles.editor_selections_item}>
               <div
                 className={styles.image}
                 style={{
                   backgroundImage: `url(${img.image})`, // Получаем в фон картинку из нашей мини базы
                 }}
               />
-              <h2>{img.name}</h2>
-              <p>XXX изображений</p>
-            </div>
+              <div className={styles.img_card__panel}>
+                <h2>{img.name}</h2>
+                <p>XXX изображений</p>
+              </div>
+            </a>
           ))}
         </div>
+        {/* <a href="#" className={styles.selections__all}></a> */}
       </div>
     </>
   );
 };
+
+const Winter = () => {
+    return (
+      <>
+      фпфпф
+          </>
+  );
+};
+
+
+
+
 
 const Home = () => {
   return (
