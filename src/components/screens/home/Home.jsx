@@ -63,23 +63,31 @@ const Content = () => {
   );
 };
 
-const Winter = () => {
-    return (
-      <>
-      фпфпф
-          </>
+const Footer = () => {
+  return (
+    <>
+      <div className="footer_logo"></div>
+      <div className="footer_menu">
+        <ul className="footer__column">
+          <li className="footer__item">
+            <a href="#" className="footer__link"></a>
+          </li>
+        </ul>
+      </div>
+    </>
   );
 };
 
-
-
-
+const Winter = () => {
+  return <>фпфпф</>;
+};
 
 const Home = () => {
   return (
     <>
       <Header />
       <Content />
+      <Footer />
     </>
   );
 };
