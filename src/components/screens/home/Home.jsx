@@ -1,5 +1,7 @@
 import styles from "./Home.module.css"; // импортируем модуль css
-import { images } from "./images.data"; // импортируем данные картинок
+import { images, imagesWinter } from "./images.data"; // импортируем данные картинок
+import { BrowserRouter, Route, Routes } from "react-router-dom"; // добвляем для работы роутов в главном файле
+import { Link } from "react-router-dom"; // добвляем для работы роутов там где указываем линки
 
 const Header = () => {
   return (
@@ -70,7 +72,9 @@ const Footer = () => {
       <div className="footer_menu">
         <ul className="footer__column">
           <li className="footer__item">
-            <a href="#" className="footer__link"></a>
+            <a href="#" className="footer__link">
+              футер
+            </a>
           </li>
         </ul>
       </div>
@@ -79,16 +83,57 @@ const Footer = () => {
 };
 
 const Winter = () => {
-  return <>фпфпф</>;
+  return (
+    <>
+      <div className={styles.content}>
+        <div>*** изображений</div>
+        <div className={styles.editor_selections_items}>
+          {imagesWinter.map((img) => (
+            <a href="#" key={img.id} className={styles.editor_selections_item}>
+              <div
+                className={styles.image}
+                style={{
+                  backgroundImage: `url(${img.image})`, // Получаем в фон картинку из нашей мини базы
+                }}
+              />
+              <div className={styles.img_card__panel}>
+                <h2>{img.name}</h2>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </>
+  );
 };
 
 const Home = () => {
   return (
-    <>
-      <Header />
-      <Content />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <>
+        <div>
+          <Header />
+        </div>
+
+        <div className="item">
+          <Link to="/content">Content</Link>
+        </div>
+
+        {/* Это линк на компоненту зима */}
+        <div className="item">
+          <Link to="/winter">Winter</Link>
+        </div>
+
+        {/* <Content /> */}
+        {/* <Winter /> */}
+        {/* <Footer /> */}
+
+        <Routes>
+          <Route path="/content" element={<Content />} />
+          <Route path="/winter" element={<Winter />} />
+        </Routes>
+      </>
+    </BrowserRouter>
   );
 };
 
