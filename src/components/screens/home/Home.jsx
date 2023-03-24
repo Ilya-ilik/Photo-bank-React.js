@@ -133,6 +133,31 @@ const NewYear = () => {
     );
   };
 
+  const Test = () => {
+    return (
+      <>
+        <div className={styles.content}>
+          <div>*** изображений</div>
+          <div className={styles.editor_selections_items}>
+            {imagesWinter.map((img) => (
+              <a href="#" key={img.id} className={styles.editor_selections_item}>
+                <div
+                  className={styles.image}
+                  style={{
+                    backgroundImage: `url(${img.image})`, // Получаем в фон картинку из нашей мини базы
+                  }}
+                />
+                <div className={styles.img_card__panel}>
+                  <h2>{img.name}</h2>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </>
+    );
+  };
+
 
 const Home = () => {
   return (
