@@ -1,190 +1,63 @@
-import styles from "./Home.module.css"; // импортируем модуль css
-import { images, imagesWinter } from "./images.data"; // импортируем данные картинок
+import Header from "../header/Header"; // импортируем компоненту Header
+// import Content from "../content/Content"; // импортируем компоненту Content
+// import styles from "./Home.module.css"; // импортируем модуль css
+// import { imagesWinter } from "./images.data"; // импортируем данные картинок
 import { BrowserRouter, Route, Routes } from "react-router-dom"; // добвляем для работы роутов в главном файле
+import Winter from "../winter/Winter";
+// import Test from "./Test";
+import Our_prices from "../our_prices/Our_prices";
+// import { Link } from "react-router-dom"; // добвляем для работы роутов там где указываем линки
 import { Link } from "react-router-dom"; // добвляем для работы роутов там где указываем линки
 
-const Header = () => {
-  return (
-    <>
-      <div className={styles.header}>
-        <span className={styles.logo} title="" />
-        <div className={styles.rigt_panel}>
-          <nav className={styles.header__nav}>
-            <a className={styles.header__nav_link} href="/search/image">
-              Поиск
-            </a>
-            <a className={styles.header__nav_link} href="/galleries">
-              Подборки
-            </a>
-            <a className={styles.header__nav_link} href="/pricing">
-              Наши цены
-            </a>
-            <a className={styles.header__nav_link} href="/about">
-              О нас
-            </a>
-          </nav>
-          <div className={styles.login_link}>
-            <a href="/signin" className={styles.link}>
-              Войти
-            </a>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-const Content = () => {
-  return (
-    <>
-      <div className={styles.content}>
-        <h2 className={styles.page_header}>ИЗБРАННЫЕ ФОТОГРАФИИ</h2>
-        <p className={styles.page_subheader}>
-          Оцените тематические коллекции, тщательно собранные нашими
-          фоторедакторами
-        </p>
-        <div className={styles.editor_selections_items}>
-          {images.map((img) => (
-            <a href="#" key={img.id} className={styles.editor_selections_item}>
-              <div
-                className={styles.image}
-                style={{
-                  backgroundImage: `url(${img.image})`, // Получаем в фон картинку из нашей мини базы
-                }}
-              />
-              <div className={styles.img_card__panel}>
-                <h2>{img.name}</h2>
-                <p>XXX изображений</p>
-              </div>
-            </a>
-          ))}
-        </div>
-        {/* <a href="#" className={styles.selections__all}></a> */}
-      </div>
-    </>
-  );
-};
-
-const Footer = () => {
-  return (
-    <>
-      <div className="footer_logo"></div>
-      <div className="footer_menu">
-        <ul className="footer__column">
-          <li className="footer__item">
-            <a href="#" className="footer__link">
-              футер
-            </a>
-          </li>
-        </ul>
-      </div>
-    </>
-  );
-};
-
-const Winter = () => {
-  return (
-    <>
-      <div className={styles.content}>
-        <div>*** изображений</div>
-        <div className={styles.editor_selections_items}>
-          {imagesWinter.map((img) => (
-            <a href="#" key={img.id} className={styles.editor_selections_item}>
-              <div
-                className={styles.image}
-                style={{
-                  backgroundImage: `url(${img.image})`, // Получаем в фон картинку из нашей мини базы
-                }}
-              />
-              <div className={styles.img_card__panel}>
-                <h2>{img.name}</h2>
-              </div>
-            </a>
-          ))}
-        </div>
-      </div>
-    </>
-  );
-};
-
-
-const NewYear = () => {
-    return (
-      <>
-        <div className={styles.content}>
-          <div>*** изображений</div>
-          <div className={styles.editor_selections_items}>
-            {imagesWinter.map((img) => (
-              <a href="#" key={img.id} className={styles.editor_selections_item}>
-                <div
-                  className={styles.image}
-                  style={{
-                    backgroundImage: `url(${img.image})`, // Получаем в фон картинку из нашей мини базы
-                  }}
-                />
-                <div className={styles.img_card__panel}>
-                  <h2>{img.name}</h2>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </>
-    );
-  };
-
-  const Test = () => {
-    return (
-      <>
-        <div className={styles.content}>
-          <div>*** изображений</div>
-          <div className={styles.editor_selections_items}>
-            {imagesWinter.map((img) => (
-              <a href="#" key={img.id} className={styles.editor_selections_item}>
-                <div
-                  className={styles.image}
-                  style={{
-                    backgroundImage: `url(${img.image})`, // Получаем в фон картинку из нашей мини базы
-                  }}
-                />
-                <div className={styles.img_card__panel}>
-                  <h2>{img.name}</h2>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </>
-    );
-  };
-
+// const NewYear = () => {
+//   return (
+//     <>
+//       <div className={styles.content}>
+//         <div>*** изображений</div>
+//         <div className={styles.editor_selections_items}>
+//           {imagesWinter.map((img) => (
+//             <a href="#" key={img.id} className={styles.editor_selections_item}>
+//               <div
+//                 className={styles.image}
+//                 style={{
+//                   backgroundImage: `url(${img.image})`, Получаем в фон картинку из нашей мини базы
+//                 }}
+//               />
+//               <div className={styles.img_card__panel}>
+//                 <h2>{img.name}</h2>
+//               </div>
+//             </a>
+//           ))}
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
 
 const Home = () => {
   return (
     <BrowserRouter>
       <>
-        <div>
-          <Header />
-        </div>
-
-        <div className="item">
-          <Link to="/content">Content</Link>
-        </div>
-
-        {/* Это линк на компоненту зима */}
-        <div className="item">
-          <Link to="/winter">Winter</Link>
-        </div>
-
-        {/* <Content /> */}
+        {/* Это компонента шапки сайта которая присутствует всегда */}
+        <Header />
         {/* <Winter /> */}
-        {/* <NewYear /> */}
-        {/* <Footer /> */}
+        {/* <Test /> */}
 
-        <Routes>
+        {/* <Routes>
           <Route path="/content" element={<Content />} />
           <Route path="/winter" element={<Winter />} />
+        </Routes> */}
+
+        <Routes>
+          <Route path="/winter" element={<Winter />} />
+          <Route path="/our_prices" element={<Our_prices />} />
         </Routes>
+
+        <Link to="/our_prices">Наши цены</Link>
+        <hr />
+        <Link to="/winter">Компонета зима</Link>
+
+        {/* <Our_prices /> */}
       </>
     </BrowserRouter>
   );
