@@ -11,9 +11,7 @@ while (arr.length < 100) {
   //
   arr.push(receivingString);
 }
-// 
-
-
+//
 
 export const images = [
   {
@@ -55,7 +53,7 @@ export const images = [
 export const imagesWinter = [
   {
     id: 1,
-    // name: "@Aleks", 
+    // name: "@Aleks",
     name: arr[Math.floor(Math.random() * arr.length)],
     image:
       "https://www.almanac.com/sites/default/files/users/The%20Editors/winter-snow-tracks_full_width.jpg",
@@ -92,5 +90,38 @@ export const imagesWinter = [
     // name: "@Svetlana",
     name: arr[Math.floor(Math.random() * arr.length)],
     image: "https://photocentra.ru/images/main108/1084423_main.jpg ",
+  },
+];
+
+export const pricingCard = [
+  {
+    id: 1,
+    quantity: 10,
+    text: "Изображений в месяц",
+    license: "Стандартная лицензия",
+  },
+  {
+    id: 2,
+    quantity: 25,
+    text: "Изображений в месяц",
+    license: "Стандартная лицензия",
+  },
+  {
+    id: 3,
+    quantity: 50,
+    text: "Изображений в месяц",
+    license: "Стандартная лицензия",
+  },
+  {
+    id: 4,
+    quantity: 100,
+    text: "Изображений в месяц",
+    license: "Стандартная лицензия",
+  },
+  {
+    id: 5,
+    quantity: 750,
+    text: "Изображений в месяц",
+    license: "Стандартная лицензия",
   },
 ];
