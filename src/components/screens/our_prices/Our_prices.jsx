@@ -26,7 +26,7 @@ const Our_prices = () => {
           ))}
         </div>
       </div>
-      <div className="pricing_contacts">
+      <div className="pricing_contacts"> {/* это контейнер для информации о контактах */}
         <div className="container_clearfix">
           <div className="pricing_contacts__help"></div>
           <div className="pricing_contacts__form"></div>
