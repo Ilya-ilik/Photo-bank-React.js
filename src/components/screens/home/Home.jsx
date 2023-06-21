@@ -5,9 +5,10 @@ import Header from "../header/Header"; // импортируем компоне�
 import { BrowserRouter, Route, Routes } from "react-router-dom"; // добвляем для работы роутов в главном файле
 import Winter from "../winter/Winter";
 // import Test from "./Test";
-import Our_prices from "../our_prices/Our_prices";
+
 // import { Link } from "react-router-dom"; // добвляем для работы роутов там где указываем линки
 import { Link } from "react-router-dom"; // добвляем для работы роутов там где указываем линки
+import Our_prices from "../our_prices/Our_prices";
 
 // const NewYear = () => {
 //   return (
@@ -40,6 +41,7 @@ const Home = () => {
       <>
         {/* Это компонента шапки сайта которая присутствует всегда */}
         <Header />
+        <Our_prices/>
         {/* <Winter /> */}
         {/* <Test /> */}
 
@@ -48,14 +50,14 @@ const Home = () => {
           <Route path="/winter" element={<Winter />} />
         </Routes> */}
 
-        <Routes>
+        {/* <Routes>
           <Route path="/winter" element={<Winter />} />
           <Route path="/our_prices" element={<Our_prices />} />
-        </Routes>
-
+        </Routes> */}
+{/* 
         <Link to="/our_prices">Наши цены</Link>
         <hr />
-        <Link to="/winter">Компонета зима</Link>
+        <Link to="/winter">Компонета зима</Link> */}
 
         {/* <Our_prices /> */}
       </>
