@@ -5,15 +5,17 @@
 .subheader {
   width: 2502px;
   height: 152px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: 0 auto;
 
 }
 
 .subheader_container {
-  max-width: 1230px;
+  
+  width: 1262px;
   height: 152px;
   margin: 0 auto;
+  border: 1px solid black;
 
 }
 
@@ -27,8 +29,10 @@
 
 .panel_top {
   display: flex;
+  width: 1262px;
   height: 65px;
   border: 1px solid black;
+  margin: 0 auto;
 }
 
 .container {
@@ -61,30 +65,26 @@
 .pricing_card:hover:before {height: 200%;}
 
 
-.more_about_the_tariff {
-  display: none;
-  border: 1px solid #000;
-  height: 3000px;
-  width: 2900px;
-  margin-left: 10px;
+
+
+
+
+.link {
+  margin-left: 64px;
 }
 
-a + .more_about_the_tariff {
-  display: block;
 
-}
 
- .test {
-  display: none;
-  border: 1px solid #000;
-  height: 30px;
-  width: 290px;
-  margin-left: 10px;
-}
 
-a:hover + .test {
-  display: block;
-}
+
+
+
+
+
+
+
+
+
 /*
 <a><img src='https://placekitten.com/100/100'></a>
 <div>text</div> */
